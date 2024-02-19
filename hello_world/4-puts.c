@@ -1,7 +1,9 @@
 #include<stdio.h>
 
 /*
-*main - Outputs exact text
+*main - Outputs exact text.
+*
+*Return: Always 0.
 */
 int main(void)
 {
