@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
-*main - Outputs specified text by for loop. Printf and Puts is restricted.
+*main - Writes specified text by for loop. Printf and Puts is restricted.
 *
 *Returns: Always 1.
 */
