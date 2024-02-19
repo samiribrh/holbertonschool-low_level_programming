@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/*
+/**
 *main - Outputs exact text.
 *
 *Return: Always 0.
