@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 
 /**
 *main - Writes specified text by for loop. Printf and Puts is restricted.
