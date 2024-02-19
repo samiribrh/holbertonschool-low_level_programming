@@ -7,12 +7,7 @@
 *Returns: Always 1.
 */
 int main(void){
-	char string[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	int l = strlen(string);
-	int i;
-	for(i=0;i<l;i++)
-	{
-		putchar(string[i]);
-	}
+	char text[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+	write(2,text,58)
 	return (1);
 }
