@@ -15,7 +15,7 @@ int main(void)
 		n++;
 	}
 	n = 'A';
-	while ( n != '[')
+	while (n != '[')
 	{
 		putchar(n);
 		n++;
