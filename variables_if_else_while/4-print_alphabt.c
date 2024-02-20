@@ -8,7 +8,7 @@
 int main(void)
 {
 	char n = 'a';
-	
+
 	while (n != '{')
 	{
 		if (n != 'q' && n != 'e')
