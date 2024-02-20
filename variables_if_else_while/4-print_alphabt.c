@@ -11,7 +11,7 @@ int main(void)
 	
 	while (n != '{')
 	{
-		if (n != 'q' || n != 'e')
+		if (n != 'q' && n != 'e')
 			putchar(n);
 		n++;
 	}
