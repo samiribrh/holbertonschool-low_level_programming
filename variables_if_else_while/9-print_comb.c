@@ -12,8 +12,8 @@ int main(void)
 	while (n != ':')
 	{
 		putchar(n);
-		putchar(',')
-		putchar(' ')
+		putchar(',');
+		putchar(' ');
 		n++;
 	}
 	putchar('\n');
