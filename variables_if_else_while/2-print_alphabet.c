@@ -8,6 +8,7 @@
 int main(void)
 {
 	char n = 'a';
+
 	while (n != '{')
 	{
 		putchar(n);
