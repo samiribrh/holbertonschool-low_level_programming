@@ -14,7 +14,7 @@ int main(void)
 		if (digit >= 0 && digit <= 9)
 			putchar('0' + digit);
 		else
-			putchar('A' + digit - 10);
+			putchar('a' + digit - 10);
 		digit++;
 	}
 	putchar('\n');
