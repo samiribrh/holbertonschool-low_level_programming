@@ -7,16 +7,23 @@
 */
 int main(void)
 {
-	char f = '0';
-	char s;
+	int f = 48;
+	int s;
 
-	while (f < '9')
+	while (f < 57)
 	{
 		s = f + 1;
-		while (s < ':')
+		while (s < 58)
+		{
 			putchar(f);
 			putchar(s);
+			if (f != 56)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			s++;
+		}
 		f++;
 	}
 	putchar('\n');
