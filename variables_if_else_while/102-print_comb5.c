@@ -8,7 +8,7 @@
 int main(void)
 {
 	int f = 48;
-	int s = 0, t = 0, fr = 1;
+	int s = 48, t = 48, fr = 49;
 
 	while (f < 58)
 	{
