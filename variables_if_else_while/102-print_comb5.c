@@ -30,7 +30,7 @@ int main(void)
 			}
 			while (t < 58)
 			{
-				if (isHere != 1);
+				if (isHere != 1)
 				{
 					fr = 48;
 				}
