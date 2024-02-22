@@ -19,10 +19,17 @@ int main(void)
 				fr = 48;
 				while (fr < 58)
 				{
-					
+					putchar(f);
+					putchar(s);
+					putchar(' ');
 					putchar(t);
 					putchar(fr);
 					fr++;
+					if(f != 57 && s != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 				t++;
 			}
