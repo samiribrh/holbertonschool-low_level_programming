@@ -28,7 +28,6 @@ int main(void)
 			}
 			while (t < 58)
 			{
-				fr = 48;
 				while (fr < 58)
 				{
 					putchar(f);
