@@ -19,6 +19,7 @@ int main(void)
 			{
 				t = f;
 				fr = s + 1;
+				putchar('$');
 			}
 			else
 			{
@@ -44,7 +45,6 @@ int main(void)
 				}
 				t++;
 			}
-			putchar('$');
 			s++;
 		}
 		f++;
