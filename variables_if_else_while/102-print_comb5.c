@@ -7,58 +7,27 @@
 */
 int main(void)
 {
-	int f = 48;
-	int s = 48, t = 48, fr = 49;
-	int isHere = 0;
-	while (f < 58)
-	{	
-		s = 48;
-		while (s < 58)
-		{
-			if (s != 57)
-			{
-				t = f;
-				fr = s + 1;
-				isHere = 1;
-			}
-			else
-			{
-				t = f + 1;
-				fr = 48;
-				isHere = 1;
-			}
-			while (t < 58)
-			{
-				if (isHere != 1)
-				{
-					fr = 48;
-				}
-				else
-				{
-					isHere = 0;
-				}
-				while (fr < 58)
-				{
-					putchar(f);
-					putchar(s);
-					putchar(' ');
-					putchar(t);
-					putchar(fr);
-					fr++;
-					if(f != 57 && s != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				t++;
-			}
-			if (f == 57 && s == 57)
-				break;
-			s++;
-		}
-		f++;
-	}
-	putchar('\n');
-	return (0);
+    int num1, num2;
+
+    for (num1 = 0; num1 < 99; num1++)
+    {
+        for (num2 = num1 + 1; num2 <= 99; num2++)
+        {
+            putchar((num1 / 10) + '0');
+            putchar((num1 % 10) + '0');
+            putchar(' ');
+            putchar((num2 / 10) + '0');
+            putchar((num2 % 10) + '0');
+
+            if (num1 != 98 || num2 != 99)
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+
+    putchar('\n');
+    return 0;
 }
+
