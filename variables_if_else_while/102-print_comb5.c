@@ -19,7 +19,6 @@ int main(void)
 			{
 				t = f;
 				fr = s + 1;
-				putchar('$');
 				isHere = 1;
 			}
 			else
@@ -58,5 +57,6 @@ int main(void)
 		}
 		f++;
 	}
+	putchar('\n');
 	return (0);
 }
