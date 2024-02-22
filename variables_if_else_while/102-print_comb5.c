@@ -9,7 +9,7 @@ int main(void)
 {
 	int f = 48;
 	int s = 48, t = 48, fr = 49;
-
+	int isHere = 0;
 	while (f < 58)
 	{	
 		s = 48;
@@ -20,14 +20,24 @@ int main(void)
 				t = f;
 				fr = s + 1;
 				putchar('$');
+				isHere = 1;
 			}
 			else
 			{
 				t = f + 1;
 				fr = 48;
+				isHere = 1;
 			}
 			while (t < 58)
 			{
+				if (isHere != 1);
+				{
+					fr = 48;
+				}
+				else
+				{
+					isHere = 0;
+				}
 				while (fr < 58)
 				{
 					putchar(f);
