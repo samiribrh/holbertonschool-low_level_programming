@@ -14,7 +14,7 @@ int main(void)
 	{
 		s = f + 1;
 		while (s < 57)
-		{	
+		{
 			t = s + 1;
 			while (t < 58)
 			{
