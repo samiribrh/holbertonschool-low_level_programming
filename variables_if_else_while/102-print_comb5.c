@@ -53,6 +53,8 @@ int main(void)
 				}
 				t++;
 			}
+			if (f == 57 && s == 57)
+				break;
 			s++;
 		}
 		f++;
