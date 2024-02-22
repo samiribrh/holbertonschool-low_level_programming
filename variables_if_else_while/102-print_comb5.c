@@ -15,7 +15,7 @@ int main(void)
 		s = 48;
 		while (s < 57)
 		{
-			if (s != 9)
+			if (s != 57)
 			{
 				t = f;
 				fr = s + 1;
