@@ -17,6 +17,7 @@ int main(void)
 		{
 			if (s != 9)
 			{
+				t = f;
 				fr = s + 1;
 			}
 			else
