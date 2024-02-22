@@ -43,10 +43,10 @@ int main(void)
 				}
 				t++;
 			}
+			putchar('$');
 			s++;
 		}
 		f++;
 	}
-	putchar('\n');
 	return (0);
 }
