@@ -11,9 +11,19 @@ int main(void)
 	int s = 48, t = 48, fr = 49;
 
 	while (f < 58)
-	{
+	{	
+		s = 48;
 		while (s < 57)
 		{
+			if (s != 9)
+			{
+				fr = s + 1;
+			}
+			else
+			{
+				t = f + 1;
+				fr = 48;
+			}
 			while (t < 58)
 			{
 				fr = 48;
