@@ -7,9 +7,7 @@
 */
 int main(void)
 {
-	unsigned long int a1 = 1, a2 = 2;
-	int i, boolean = 1;
-	unsigned long int lnum = 10000000000, a3, part1a1, part1a2, part2a1, part2a2, part1a3, part2a3;
+	unsigned long int a1 = 1, a2 = 2, lnum = 10000000000, a3, part1a1, part1a2, part2a1, part2a2, part1a3, part2a3, i, boolean = 1;
 
 	printf("%lu, %lu", a1, a2);
 	for (i = 0; i < 96; i++)
@@ -26,6 +24,11 @@ int main(void)
 			}
 			part1a3 = part1a1 + part1a2;
 			part2a3 = part2a1 + part2a2;
+			if (part2a1 + part2a2 > 9999999999)
+			{
+				part1a3 += 1;
+				part2a3 %= lnum
+			}
 			part1a1 = part1a2;
 			part2a1 = part2a2;
 			part1a2 = part1a3;
