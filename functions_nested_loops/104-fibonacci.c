@@ -33,7 +33,7 @@ int main(void)
 			part2a1 = part2a2;
 			part1a2 = part1a3;
 			part2a2 = part2a3;
-			printf(", %lu%010lu", part1a3, part2a3);
+			printf(", %lu%lu", part1a3, part2a3);
 		}
 		else
 		{
