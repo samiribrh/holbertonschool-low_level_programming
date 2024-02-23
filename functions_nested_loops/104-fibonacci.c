@@ -24,7 +24,7 @@ int main(void)
 			a3 = a1 + a2;
 			a1 = a2;
 			a2 = a3;
-			printf("%lu%010lu", part1, part2);
+			printf(", %lu%010lu", part1, part2);
 		}
 		else
 		{
