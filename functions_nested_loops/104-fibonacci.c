@@ -27,7 +27,7 @@ int main(void)
 			if (part2a1 + part2a2 > 9999999999)
 			{
 				part1a3 += 1;
-				part2a3 %= lnum
+				part2a3 %= lnum;
 			}
 			part1a1 = part1a2;
 			part2a1 = part2a2;
