@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * jack_bauer - Writes every minute of the day.
- *
- * Return: void.
- */
+*jack_bauer - Writes every minute of the day.
+*
+* Return: void.
+*/
 void jackbauer(void) 
 {
 	int hour;

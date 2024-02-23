@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * times_table - Writes the 9 times table.
- *
- * Return: void.
- */
+*times_table - Writes the 9 times table.
+*
+*Return: void.
+*/
 void times_table(void)
 {
 	int i, j, k, result, spaces;
