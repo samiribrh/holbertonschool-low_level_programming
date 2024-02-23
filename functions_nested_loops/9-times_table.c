@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * times_table - Writes the 9 times table.
+ *
+ * Return: void.
+ */
+void times_table(void)
+{
+	int i, j, k, result, spaces;
+
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			result = i * j;
+			spaces = (result < 10) ? 2 : 1;
+
+			for (k = 0; k < spaces; k++)
+			{
+				_putchar(' ');
+			}
+			_putchar((result / 10) + '0');
+			_putchar((result % 10) + '0');
+			if (j < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+		_putchar('\n');
+	}
+}
