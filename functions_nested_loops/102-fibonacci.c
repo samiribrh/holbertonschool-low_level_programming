@@ -19,7 +19,7 @@ int main(void)
 		a3 = a1 + a2;
 		a1 = a2;
 		a2 = a3;
-		printf(", %d", a3);
+		printf(", %ld", a3);
 	}
 	return (0);
 }
