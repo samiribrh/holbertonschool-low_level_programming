@@ -7,8 +7,8 @@
 */
 int main(void)
 {
-	unsigned long int a1 = 1, a2 = 2, lnum = 10000000000, a3, part1a1, part1a2, part2a1; 
-	unsigned long int part2a2, part1a3, part2a3, i, boolean = 1;
+	unsigned long int a1 = 1, a2 = 2, lnum = 10000000000, a3, part1a1, part1a2; 
+	unsigned long int part2a1, part2a2, part1a3, part2a3, i, boolean = 1;
 
 	printf("%lu, %lu", a1, a2);
 	for (i = 0; i < 96; i++)
