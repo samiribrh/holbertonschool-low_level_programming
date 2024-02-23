@@ -12,7 +12,7 @@ int main(void)
 	printf("%lu, %lu", a1, a2);
 	for (i = 0; i < 96; i++)
 	{
-		if (i > 90)
+		if (i > 89)
 		{
 			if ( boolean == 1)
 			{
