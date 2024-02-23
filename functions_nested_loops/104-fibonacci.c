@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (i > 89)
 		{
-			if ( boolean == 1)
+			if (boolean == 1)
 			{
 				part1a1 = a1 / lnum;
 				part2a1 = a1 % lnum;
