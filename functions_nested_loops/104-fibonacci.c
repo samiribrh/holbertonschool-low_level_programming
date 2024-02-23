@@ -7,24 +7,30 @@
 */
 int main(void)
 {
-	unsigned long int a1 = 1;
-	unsigned long int a2 = 2;
-	int i;
-	unsigned long int lnum = 10000000000;
-	unsigned long int a3, part1, part2;
+	unsigned long int a1 = 1, a2 = 2;
+	int i, bollean = 1;
+	unsigned long int lnum = 10000000000, a3, part1a1, part1a2, par2a1, part2a2, part1a3, part2a3;
 
-	printf("%lu, ", a1);
-	printf("%lu", a2);
+	printf("%lu, %lu", a1, a2);
 	for (i = 0; i < 96; i++)
 	{
-		if (a1 + a2 > lnum)
+		if (i > 90)
 		{
-			part1 = (a1 + a2) / lnum;
-			part2 = (a1 + a2) % lnum;
-			a3 = a1 + a2;
-			a1 = a2;
-			a2 = a3;
-			printf(", %lu%010lu", part1, part2);
+			if ( boolean == 1)
+			{
+				part1a1 = a1 / lnum;
+				part2a1 = a1 % lnum;
+				part1a2 = a2 / lnum;
+				part2a2 = a2 % lnum;
+				boolean = 0;
+			}
+			part1a3 = part1a1 + part1a2;
+			part2a3 = part2a1 + part2a2;
+			part1a1 = part1a2;
+			part2a1 = part2a2;
+			part1a2 = part1a3;
+			part2a2 = part3a3;
+			printf(", %lu%010lu", part1a3, part2a3);
 		}
 		else
 		{
