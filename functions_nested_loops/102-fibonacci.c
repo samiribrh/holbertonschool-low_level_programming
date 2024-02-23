@@ -9,7 +9,8 @@ int main(void)
 {
 	int a1 = 1;
 	int a2 = 2;
-	int i, a3;
+	int i;
+	long int a3;
 
 	printf("%d, ", a1);
 	printf("%d", a2);
@@ -18,7 +19,7 @@ int main(void)
 		a3 = a1 + a2;
 		a1 = a2;
 		a2 = a3;
-		printf("%d, ", a3);
+		printf(", %d", a3);
 	}
 	return (0);
 }
