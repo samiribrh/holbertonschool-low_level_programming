@@ -21,5 +21,6 @@ int main(void)
 		a2 = a3;
 		printf(", %ld", a3);
 	}
+	printf("\n");
 	return (0);
 }
