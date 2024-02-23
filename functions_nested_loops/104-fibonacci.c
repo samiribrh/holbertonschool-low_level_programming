@@ -29,7 +29,7 @@ int main(void)
 			part1a1 = part1a2;
 			part2a1 = part2a2;
 			part1a2 = part1a3;
-			part2a2 = part3a3;
+			part2a2 = part2a3;
 			printf(", %lu%010lu", part1a3, part2a3);
 		}
 		else
