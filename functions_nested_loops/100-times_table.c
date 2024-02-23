@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 
+void print_result(int j, int n, int result);
+
 /**
 *times_table - Writes the n times table.
 *@n: size of the table
