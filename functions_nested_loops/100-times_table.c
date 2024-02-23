@@ -27,8 +27,8 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-				_putchar((r < 10 && j != 0) ? ' ' : (r < 100) ? ' ' : d3);
-				_putchar((r < 10 && j != 0) ? ' ' : (r < 100) ? d2 : d2);
+				_putchar((r < 10 && j != 0) ? ' ' : (r < 100 && j != 0) ? ' ' : d3);
+				_putchar((r < 10 && j != 0) ? ' ' : (r < 100 && j != 0) ? d2 : d2);
 				_putchar(d1);
 			}
 			_putchar('\n');
