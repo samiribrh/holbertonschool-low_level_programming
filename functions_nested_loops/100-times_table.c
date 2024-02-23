@@ -19,13 +19,22 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				result = i * j;
-				print_result(i, j, n, result);
+				print_result(j, n, result);
 			}
 			_putchar('\n');
 		}
 	}
 }
-void print_result(int i, int j, int n, int result)
+
+/**
+*print_result - Writes the numbers.
+*@j: the number of column
+*@n: the size of table
+*@result: the number that should be printed.
+*
+*Return: void.
+*/
+void print_result(int j, int n, int result)
 {
 	if (result < 10)
 	{
