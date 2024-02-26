@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*print_line - Writes diagonal.
+*print_diagonal - Writes diagonal.
 *@n: size of the diagonal
 *
 *Return: void.
