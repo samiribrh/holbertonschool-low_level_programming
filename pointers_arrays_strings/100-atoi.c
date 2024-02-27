@@ -9,15 +9,15 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	int result = 0;
+	unsigned int result = 0;
 
 	while(*s)
 	{
-		if (*(s + i) >= 48 && *(s + i) <= 57)
+		if (*s >= 48 && *s <= 57)
 		{
-			n = n * 10 + (*(s + i) - 48);
+			result = result * 10 + (*s - 48);
 
-			if (*(s + i + 1) < 48 || *(s + i + 1) > 57)
+			if (*(s + 1) < 48 || *(s + 1) > 57)
 			{
 				break;
 			}
