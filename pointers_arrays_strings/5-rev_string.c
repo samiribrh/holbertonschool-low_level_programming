@@ -9,12 +9,15 @@
 void rev_string(char *s)
 {
 	int i = 0, j = 0;
+	int scopy[];
 
-	while (s[i] != '\0')
+	while (*s)
+		scopy[i] = *s;
 		i++;
+		
 	while (i != 0)
 	{
-		s[i] = s[j];
+		s[j] = scopy[i];
 		i--;
 		j++;
 	}
