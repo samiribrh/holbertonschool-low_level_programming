@@ -12,9 +12,10 @@ void rev_string(char *s)
 	char scopy[] = "";
 
 	while (*s)
+	{
 		scopy[i] = *s;
 		i++;
-		
+	}
 	while (i != 0)
 	{
 		s[j] = scopy[i];
