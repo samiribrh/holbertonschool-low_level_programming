@@ -19,7 +19,7 @@ int _atoi(char *s)
 		{
 			result = result * 10 + (*s - 48);
 
-			if (*(s + 1) < 48 || *(s + 1) > 57)
+			if (*(s + 1) < 48 || * (s + 1) > 57)
 			{
 				break;
 			}
