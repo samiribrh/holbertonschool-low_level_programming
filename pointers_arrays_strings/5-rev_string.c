@@ -16,11 +16,10 @@ void rev_string(char *s)
 		scopy[i] = *s;
 		i++;
 	}
-	i--;
 	while (i != 0)
 	{
-		s[j] = scopy[i];
 		i--;
+		s[j] = scopy[i];
 		j++;
 	}
 }
