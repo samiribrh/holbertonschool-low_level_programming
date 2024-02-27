@@ -3,18 +3,18 @@
 #include <stdlib.h>
 
 /**
-*main - Generates 25 digit random password.
+*main - Generates 50 digit random password.
 *
 *Return: void.
 */
 int main(void)
 {
-	int pass[25];
+	int pass[50];
 	int digit;
 
 	srand(time(NULL));
 
-	for (digit = 0; digit < 25; digit++)
+	for (digit = 0; digit < 50; digit++)
 	{
 		pass[digit] = rand() % 78;
 		putchar(pass[digit] + '0');
