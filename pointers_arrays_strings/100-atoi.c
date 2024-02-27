@@ -13,6 +13,8 @@ int _atoi(char *s)
 
 	while(*s)
 	{
+		if (*s == 45)
+			sign *= -1;
 		if (*s >= 48 && *s <= 57)
 		{
 			result = result * 10 + (*s - 48);
