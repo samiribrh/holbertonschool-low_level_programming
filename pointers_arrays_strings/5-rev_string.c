@@ -16,6 +16,7 @@ void rev_string(char *s)
 		scopy[i] = *s;
 		i++;
 	}
+	scopy[i] = '\0';
 	while (i != 0)
 	{
 		i--;
