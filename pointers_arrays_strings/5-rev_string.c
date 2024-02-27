@@ -11,9 +11,9 @@ void rev_string(char *s)
 	int i = 0, j = 0;
 	char scopy[100];
 
-	while (*s)
+	while (s[i] != '\0')
 	{
-		scopy[i] = *s;
+		scopy[i] = s[i];
 		i++;
 	}
 	scopy[i] = '\0';
