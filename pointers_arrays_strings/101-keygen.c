@@ -1,25 +1,27 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
-*main - Generates  random password for 101-creckme program.
+*main - Generate random password to crack 101-crackme file.
 *
-*Return: void.
+*Return: 0.
 */
+
 int main(void)
 {
-	int pass[100];
-	int digit, n, sum = 0;
+	int pass[100], digit;
+	int sum = 0, n;
 
 	srand(time(NULL));
 
 	for (digit = 0; digit < 100; digit++)
 	{
 		pass[digit] = rand() % 78;
+		sum+= pass[digit] + '0';
 		putchar(pass[digit] + '0');
-		sum += pass[digit];
-		if (2772 - sum - '0' < 78 )
+
+		if ((2772 - sum) - '0' < 78)
 		{
 			n = 2772 - sum - '0';
 			sum += n;
@@ -29,4 +31,3 @@ int main(void)
 	}
 	return (0);
 }
-
