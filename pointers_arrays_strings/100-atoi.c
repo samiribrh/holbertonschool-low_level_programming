@@ -11,7 +11,7 @@ int _atoi(char *s)
 	int sign = 1;
 	unsigned int result = 0;
 
-	while(*s)
+	while (*s)
 	{
 		if (*s == 45)
 			sign *= -1;
@@ -19,7 +19,7 @@ int _atoi(char *s)
 		{
 			result = result * 10 + (*s - 48);
 
-			if (*(s + 1) < 48 || * (s + 1) > 57)
+			if (*(s + 1) < 48 || *(s + 1) > 57)
 			{
 				break;
 			}
