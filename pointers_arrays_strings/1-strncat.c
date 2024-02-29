@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-**_strcat -  Appends two strings.
+**_strncat -  Appends two strings.
 *@dest: Destination string
 *@src: String to be appended
 *@n: Size of the part of src which should be appended
