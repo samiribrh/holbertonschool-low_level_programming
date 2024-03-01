@@ -15,11 +15,9 @@ char *rot13(char *s)
 		if (s[i] + key > 122)
 		{
 			s[i] -= 13;
+			continue;
 		}
-		else
-		{
-			s[i] += key;
-		}
+		s[i] += key;
 	}
 	return (s);
 }
