@@ -10,7 +10,7 @@ char *rot13(char *s)
 {
 	int i, key = 13;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
 		if (s[i] + key > 122)
 		{
