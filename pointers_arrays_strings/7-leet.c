@@ -15,7 +15,7 @@ char *leet(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
-		for(j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)
 		{
 			if (s[i] == bigletters[j] || s[i] == smallletters[j])
 			{
