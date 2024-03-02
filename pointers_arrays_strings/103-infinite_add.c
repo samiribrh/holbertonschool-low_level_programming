@@ -63,6 +63,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		result[k] = sum + '0';
 		k++;
 	}
+	result[k] = '\0';
 	rev_string(result);
 	if (k < size_r)
 	{
