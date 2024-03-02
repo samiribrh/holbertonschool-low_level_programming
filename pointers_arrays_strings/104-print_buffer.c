@@ -20,7 +20,7 @@ void print_buffer(char *b, int size)
 			}
 			else
 			{
-				printf("    ");
+				printf("  ");
 			}
 			if (j % 2 == 1)
 				printf(" ");
