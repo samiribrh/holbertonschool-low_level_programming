@@ -33,11 +33,11 @@ void rev_string(char *s)
 *
 *Return: Copied string.
 */
-char *_strcopy(char *dest, char *src)
+void *_strcopy(char *dest, char *src)
 {
 	int i = 0;
 
-	while ((src[i] != '\0') && (i < n))
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
@@ -56,7 +56,7 @@ char *_strcopy(char *dest, char *src)
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, k = 0, c = 0, sum, carry = 0;
+	int i = 0, j = 0, k = 0, sum, carry = 0;
 	char result[150];
 
 	while (n1[i] != '\0')
