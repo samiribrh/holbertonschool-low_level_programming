@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+*print_buffer - Prints the buffer with extra infos.
+*@b: Buffer that should be printed
+*@size: Part size of the buffer that should be printed
+*
+*Return: void.
+*/
 void print_buffer(char *b, int size)
 {
 	int i, j;
