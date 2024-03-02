@@ -29,7 +29,6 @@ void rev_string(char *s)
 **_strcopy -  Copies two strings.
 *@dest: Destination string
 *@src: String to be copied
-*@n: Size of the part of src which should be copied
 *
 *Return: Copied string.
 */
