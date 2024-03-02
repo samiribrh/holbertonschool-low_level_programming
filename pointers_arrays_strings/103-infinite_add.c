@@ -1,6 +1,31 @@
 #include "main.h"
 
 /**
+*rev_string - Reverses the string.
+*@s: the string that should be reversed.
+*
+*Return: void.
+*/
+void rev_string(char *s)
+{
+	int i = 0, j = 0;
+	char scopy[1000];
+
+	while (s[i] != '\0')
+	{
+		scopy[i] = s[i];
+		i++;
+	}
+	scopy[i] = '\0';
+	while (i != 0)
+	{
+		i--;
+		s[j] = scopy[i];
+		j++;
+	}
+}
+
+/**
 **infinite_add - Adds two numbers.
 *@n1: First number
 *@n2: Second number
@@ -9,59 +34,42 @@
 *
 *Return: Result buffer.
 */
-char* reverse_string(char* str) {
-    char temp, i;
-    int length = 0;
-    while (str[length] != '\0') {
-        length++;
-    }
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+	int i = -1, j = -1, k = 0, c = 0, result[200], sum, carry = 0;
 
-    for (i = 0; i < length / 2; i++) {
-        temp = str[i];
-        str[i] = str[length - i - 1];
-        str[length - i - 1] = temp;
-    }
-    return (str);
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+	while (i >= 0 || j >= 0|| carry > 0)
+	{
+		sum = carry;
+		if (i >= 0)
+		{
+			sum += n1[i];
+			i--;
+		}
+		if (j >= 0)
+		{
+			sum += n2[j];
+			j--;
+		}
+		carry = sum / 10;
+		sum %= 10;
+		result[k] = sum;
+		k++
+	}
+	rev_string(resul);
+	if (k < size_r)
+	{
+		while (c < k)
+		{
+			r[c] = result[c];
+			c++;
+		}
+		r[c] = '\0';
+	}
+	else
+		return 0;
 }
-
-char* infinite_add(char* n1, char* n2, char* r, int size_r) {
-    int carry = 0;
-    int index = 0;
-
-    // Reverse the input strings for easier processing
-    reverse_string(n1);
-    reverse_string(n2);
-
-    while (*n1 != '\0' || *n2 != '\0' || carry != 0) {
-        int digit_sum;
-	digit_sum = carry + (*n1 - '0') + (*n2 - '0');
-        carry = digit_sum / 10;
-        int digit;
-	digit = digit_sum % 10;
-
-        // Check if there is enough space in the result buffer
-        if (index >= size_r - 1) {
-            return (0); // Not enough space
-        }
-
-        r[index] = digit + '0';
-        index++;
-
-        // Move to the next digits in the input strings
-        if (*n1 != '\0') {
-            n1++;
-        }
-        if (*n2 != '\0') {
-            n2++;
-        }
-    }
-
-    // Null-terminate the result string
-    r[index] = '\0';
-
-    // Reverse the result string before returning
-    reverse_string(r);
-
-    return (r);
-}
-
