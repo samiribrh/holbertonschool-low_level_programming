@@ -58,7 +58,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		carry = sum / 10;
 		sum %= 10;
-		result[k] = sum;
+		result[k] = sum + '0';
 		k++;
 	}
 	rev_string(result);
