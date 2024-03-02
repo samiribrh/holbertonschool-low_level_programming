@@ -58,9 +58,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		carry = sum / 10;
 		sum %= 10;
 		result[k] = sum;
-		k++
+		k++;
 	}
-	rev_string(resul);
+	rev_string(result);
 	if (k < size_r)
 	{
 		while (c < k)
