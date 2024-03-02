@@ -33,7 +33,7 @@ void rev_string(char *s)
 *
 *Return: Copied string.
 */
-void *_strcopy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i = 0;
 
@@ -43,6 +43,7 @@ void *_strcopy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
+	return (dest);
 }
 
 /**
