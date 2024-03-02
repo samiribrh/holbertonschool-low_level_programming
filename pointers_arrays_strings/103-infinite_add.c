@@ -26,6 +26,26 @@ void rev_string(char *s)
 }
 
 /**
+**_strcopy -  Copies two strings.
+*@dest: Destination string
+*@src: String to be copied
+*@n: Size of the part of src which should be copied
+*
+*Return: Copied string.
+*/
+char *_strcopy(char *dest, char *src)
+{
+	int i = 0;
+
+	while ((src[i] != '\0') && (i < n))
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+}
+
+/**
 **infinite_add - Adds two numbers.
 *@n1: First number
 *@n2: Second number
@@ -45,7 +65,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	i--;
 	j--;
-	while (i >= 0 || j >= 0|| carry > 0)
+	while (i >= 0 || j >= 0 || carry > 0)
 	{
 		sum = carry;
 		if (i >= 0)
@@ -67,14 +87,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	rev_string(result);
 	if (k < size_r)
 	{
-		while (c < k)
-		{
-			r[c] = result[c];
-			c++;
-		}
-		r[c] = '\0';
+		strcopy(r, result);
 		return (r);
 	}
 	else
-		return 0;
+		return (0);
 }
