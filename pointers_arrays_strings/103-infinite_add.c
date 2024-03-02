@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	for (k = 0; k < result_len; ++k)
 	{
-		r[k] = r[size_r + k];
+		r[k] = r[size_r - result_len  + k];
 	}
 	r[result_len] = '\0';
 	return (r);
