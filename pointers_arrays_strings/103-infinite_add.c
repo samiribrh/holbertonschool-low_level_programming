@@ -48,12 +48,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		sum = carry;
 		if (i >= 0)
 		{
-			sum += n1[i];
+			sum += n1[i] - '0';
 			i--;
 		}
 		if (j >= 0)
 		{
-			sum += n2[j];
+			sum += n2[j] - '0';
 			j--;
 		}
 		carry = sum / 10;
