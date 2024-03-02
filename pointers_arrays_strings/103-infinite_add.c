@@ -37,7 +37,7 @@ void rev_string(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i = 0, j = 0, k = 0, c = 0, sum, carry = 0;
-	char result[200];
+	char result[500];
 
 	while (n1[i] != '\0')
 		i++;
