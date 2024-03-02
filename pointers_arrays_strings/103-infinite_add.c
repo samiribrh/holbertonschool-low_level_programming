@@ -87,7 +87,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	rev_string(result);
 	if (k < size_r)
 	{
-		strcopy(r, result);
+		_strcopy(r, result);
 		return (r);
 	}
 	else
