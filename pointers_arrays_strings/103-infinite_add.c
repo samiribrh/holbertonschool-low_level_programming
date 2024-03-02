@@ -10,18 +10,18 @@
 *Return: Result buffer.
 */
 char* reverse_string(char* str) {
-    char temp;
+    char temp, i;
     int length = 0;
     while (str[length] != '\0') {
         length++;
     }
 
-    for (int i = 0; i < length / 2; i++) {
+    for (i = 0; i < length / 2; i++) {
         temp = str[i];
         str[i] = str[length - i - 1];
         str[length - i - 1] = temp;
     }
-    return str;
+    return (str);
 }
 
 char* infinite_add(char* n1, char* n2, char* r, int size_r) {
@@ -33,13 +33,15 @@ char* infinite_add(char* n1, char* n2, char* r, int size_r) {
     reverse_string(n2);
 
     while (*n1 != '\0' || *n2 != '\0' || carry != 0) {
-        int digit_sum = carry + (*n1 - '0') + (*n2 - '0');
+        int digit_sum;
+	digit_sum = carry + (*n1 - '0') + (*n2 - '0');
         carry = digit_sum / 10;
-        int digit = digit_sum % 10;
+        int digit;
+	digit = digit_sum % 10;
 
         // Check if there is enough space in the result buffer
         if (index >= size_r - 1) {
-            return NULL; // Not enough space
+            return (0); // Not enough space
         }
 
         r[index] = digit + '0';
@@ -60,6 +62,6 @@ char* infinite_add(char* n1, char* n2, char* r, int size_r) {
     // Reverse the result string before returning
     reverse_string(r);
 
-    return r;
+    return (r);
 }
 
