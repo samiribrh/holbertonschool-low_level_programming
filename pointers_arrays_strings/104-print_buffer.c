@@ -22,7 +22,7 @@ void print_buffer(char *b, int size)
 			}
 			else
 			{
-				printf(" ");
+				printf("  ");
 			}
 
 			if (j % 2 == 1)
@@ -30,7 +30,6 @@ void print_buffer(char *b, int size)
 				printf(" ");
 			}
 		}
-		printf(" ");
 		for (j = 0; j < 10 && i + j < size; j++) 
 		{
 			current_char = b[i + j];
