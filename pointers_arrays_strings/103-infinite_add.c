@@ -9,44 +9,57 @@
 *
 *Return: Result buffer.
 */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
-	int i = -1, j = -1, k, carry = 0, sum;
-	int result_len;
+char* reverse_string(char* str) {
+    char temp;
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
 
-	while (n1[i] != 0)
-		i++;
-	while (n2[j] != 0)
-		j++;
-	result_len = (i > j) ? i : j;
-	while (i >= 0 || j >= 0 || carry > 0)
-	{
-		sum = carry;
-
-		if (i >= 0)
-		{
-			sum += n1[i] - 48;
-			i--;
-		}
-		if (j >= 0)
-		{
-			sum += n2[j] - 48;
-			j--;
-		}
-		if (size_r - 1 >= 0)
-		{
-			r[size_r - 2] = sum % 10 + 48;
-			size_r--;
-		}
-		else
-			return (0);
-		carry = sum / 10;
-	}
-
-	for (k = 0; k < result_len; ++k)
-	{
-		r[k] = r[size_r - result_len  + k];
-	}
-	r[result_len] = '\0';
-	return (r);
+    for (int i = 0; i < length / 2; i++) {
+        temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+    return str;
 }
+
+char* infinite_add(char* n1, char* n2, char* r, int size_r) {
+    int carry = 0;
+    int index = 0;
+
+    // Reverse the input strings for easier processing
+    reverse_string(n1);
+    reverse_string(n2);
+
+    while (*n1 != '\0' || *n2 != '\0' || carry != 0) {
+        int digit_sum = carry + (*n1 - '0') + (*n2 - '0');
+        carry = digit_sum / 10;
+        int digit = digit_sum % 10;
+
+        // Check if there is enough space in the result buffer
+        if (index >= size_r - 1) {
+            return NULL; // Not enough space
+        }
+
+        r[index] = digit + '0';
+        index++;
+
+        // Move to the next digits in the input strings
+        if (*n1 != '\0') {
+            n1++;
+        }
+        if (*n2 != '\0') {
+            n2++;
+        }
+    }
+
+    // Null-terminate the result string
+    r[index] = '\0';
+
+    // Reverse the result string before returning
+    reverse_string(r);
+
+    return r;
+}
+
