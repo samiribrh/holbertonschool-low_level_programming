@@ -5,7 +5,7 @@
 *@s: The string to be searched
 *@accept: Accepted characters
 *
-*Return: Number of bytes in the segment.
+*Return: Location of the first occurence of the string.
 */
 char *_strpbrk(char *s, char *accept)
 {
