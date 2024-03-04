@@ -5,12 +5,12 @@
 *@haystack: The string to be searched
 *@needle: Accepted string
 *
-*Return: Pointer to the beginning location of the first occurence of the string.
+*Return: Beginning location of the first occurence of the string.
 */
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	
+
 	if (*needle == '\0')
 		return (haystack);
 	while (*haystack != '\0')
