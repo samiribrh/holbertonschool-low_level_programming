@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
-*strlen - Calculates the size of a string
+*strlength - Calculates the size of a string
 *@s: Given string
 *
 *Return: Length of the string
 */
-int strlen(char *s)
+int strlength(char *s)
 {
 	if (*s == 0)
 		return 0;
-	return (1 + strlen*(*(s + 1));
+	return (1 + strlength*(*(s + 1));
 }
 
 /**
@@ -44,6 +44,6 @@ int is_palindrome(char *s)
 
 	if (*s == 0)
 		return 1;
-	i = strlen(s);
+	i = strlength(s);
 	return (checker(s, d + i - 1));
 }
