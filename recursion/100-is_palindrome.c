@@ -18,7 +18,7 @@ int checker(char *s, char *d)
 */
 int is_palindrome(char *s)
 {
-	int i, j;
+	int i;
 	char *d = s;
 
 	if (*s == 0)
