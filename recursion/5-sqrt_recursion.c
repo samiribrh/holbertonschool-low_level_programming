@@ -7,13 +7,13 @@
 *
 *Return: The guessed number
 */
-int guess(int n, int guess)
+int guesser(int n, int guess)
 {
 	if (guess * guess == n)
 		return (guess);
 	else if (guess * guess > n)
 		return (-1);
-	return (guess(n, guess + 1));
+	return (guesser(n, guess + 1));
 }
 
 /**
@@ -26,5 +26,5 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (guess(n, 1))
+	return (guesser(n, 1))
 }
