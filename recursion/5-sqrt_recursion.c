@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*guess - Guessing the square root of a function.
+*guesser - Guessing the square root of a function.
 *@n: The number
 *@guess: The guess
 *
