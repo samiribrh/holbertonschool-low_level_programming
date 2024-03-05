@@ -10,7 +10,7 @@ int strlength(char *s)
 {
 	if (*s == 0)
 		return 0;
-	return (1 + strlength(*(s + 1));
+	return (1 + strlength(s + 1));
 }
 
 /**
