@@ -9,7 +9,7 @@
 int strlength(char *s)
 {
 	if (*s == 0)
-		return 0;
+		return (0);
 	return (1 + strlength(s + 1));
 }
 
@@ -26,7 +26,7 @@ int checker(char *s, char *d)
 	if (*d != *s)
 		return (0);
 	if (*s == 0 && *d == 0)
-		return 1;
+		return (1);
 	return (checker(s + 1, d - 1));
 }
 
@@ -43,7 +43,7 @@ int is_palindrome(char *s)
 	char *d = s;
 
 	if (*s == 0)
-		return 1;
+		return (1);
 	i = strlength(s);
 	return (checker(s, d + i - 1));
 }
