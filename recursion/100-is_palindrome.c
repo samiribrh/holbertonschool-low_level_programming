@@ -1,5 +1,26 @@
 #include "main.h"
 
+/**
+*strlen - Calculates the size of a string
+*@s: Given string
+*
+*Return: Length of the string
+*/
+int strlen(char *s)
+{
+	if (*s == 0)
+		return 0;
+	return (1 + strlen*(*(s + 1));
+}
+
+/**
+*checker - Checks the string if it is palindrome.
+*@s: The given string
+*@d: Reversed string
+*
+*Return: 1 if the string is a palindrome
+*       0 is the string is not a palindrome.
+*/
 int checker(char *s, char *d)
 {
 	if (*d != *s)
@@ -23,7 +44,6 @@ int is_palindrome(char *s)
 
 	if (*s == 0)
 		return 1;
-	for (i = 0; s[i] != 0; i++)
-		;
+	i = strlen(s);
 	return (checker(s, d + i - 1));
 }
