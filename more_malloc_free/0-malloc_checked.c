@@ -17,15 +17,3 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 	return (ptr);
 }
-
-/**
-*main - Main function.
-*
-*Return: 0.
-*/
-int main(void)
-{
-	void *ptr = malloc_checked(13);
-
-	return (0);
-}
