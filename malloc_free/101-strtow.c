@@ -68,7 +68,7 @@ char **strtow(char *str)
 		}
 		else if (c == 0)
 		{
-			c++
+			c++;
 			start = i;
 		}
 	}
