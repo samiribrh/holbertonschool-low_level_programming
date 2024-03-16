@@ -54,9 +54,9 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ')
 			continue;
-		for (wordlen = 0; str[i + wordlen] != ' '; wordlen++)
+		for (wordlen = 0; str[i + wordlen] && str[i + wordlen] != ' '; wordlen++)
 			;
-		temp = malloc(sizeof(char) * wordlen);
+		temp = malloc(sizeof(char) * (wordlen + 1));
 		if (temp == NULL)
 			return (NULL);
 		for (j = 0; j < wordlen; j++)
