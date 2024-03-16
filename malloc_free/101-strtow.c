@@ -6,7 +6,7 @@
 *counter - Counts the number of words in a string.
 *@str: String to count
 *
-*Return: Number of words in string. 
+*Return: Number of words in string.
 */
 int counter(char *str)
 {
@@ -45,8 +45,8 @@ char **strtow(char *str)
 	words = counter(str);
 	if (!words)
 		return (NULL);
-	
-	matrix = malloc(sizeof(char*) * (words + 1));
+
+	matrix = malloc(sizeof(char *) * (words + 1));
 	if (matrix == NULL)
 		return (NULL);
 
