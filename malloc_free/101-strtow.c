@@ -40,7 +40,7 @@ char **strtow(char *str)
 	char **matrix, *temp;
 	int words, i, j, k = 0, wordlen;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 	words = counter(str);
 	if (!words)
@@ -54,7 +54,7 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ')
 			continue;
-		for (wordlen = 0; str[i + wordlen] = ' '; wordlen++)
+		for (wordlen = 0; str[i + wordlen] != ' '; wordlen++)
 			;
 		temp = malloc(sizeof(char) * wordlen);
 		for (j = 0; j < wordlen; j++)
