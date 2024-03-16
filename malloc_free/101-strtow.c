@@ -46,7 +46,7 @@ char **strtow(char *str)
 	if (!words)
 		return (NULL);
 	
-	matrix = malloc(sizeof(char) * (words + 1));
+	matrix = malloc(sizeof(char*) * (words + 1));
 	if (matrix == NULL)
 		return (NULL);
 
@@ -57,14 +57,16 @@ char **strtow(char *str)
 		for (wordlen = 0; str[i + wordlen] != ' '; wordlen++)
 			;
 		temp = malloc(sizeof(char) * wordlen);
+		if (temp == NULL)
+			return (NULL);
 		for (j = 0; j < wordlen; j++)
 		{
-			temp[j] = str[i];
-			i++;
+			temp[j] = str[i + j];
 		}
 		temp[j] = '\0';
 		matrix[k]  = temp;
 		k++;
+		i += wordlen;
 	}
 	matrix[k] = NULL;
 	return (matrix);
