@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 *counter - Counts the number of words in a string.
@@ -26,6 +27,7 @@ int counter(char *str)
 
 	return (words);
 }
+
 /**
 ***strtow - Splits the given string into words.
 *@str: String to be splitted
@@ -36,41 +38,33 @@ int counter(char *str)
 char **strtow(char *str)
 {
 	char **matrix, *temp;
-	int i, k = 0, len = 0, words, c = 0, start, end;
+	int words, i, j, k = 0, wordlen;
 
-	while (*(str + len))
-		len++;
-	words = counter(str);
-	if (words == 0)
+	if (str == NULL || str == "")
 		return (NULL);
-
-	matrix = malloc(sizeof(char *) * (words + 1));
+	words = counter(str);
+	if (!words)
+		return (NULL);
+	
+	matrix = malloc(sizeof(char) * (words + 1));
 	if (matrix == NULL)
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == ' ' || !str[i])
+		if (str[i] == ' ')
+			continue;
+		for (wordlen = 0; str[i + wordlen] = ' '; wordlen++)
+			;
+		temp = malloc(sizeof(char) * wordlen);
+		for (j = 0; j < wordlen; j++)
 		{
-			if (c)
-			{
-				end = i;
-				temp = malloc(sizeof(char) * (c + 1));
-				if (temp == NULL)
-					return (NULL);
-				while (start < end)
-					*temp++ = str[start++];
-				*temp = '\0';
-				matrix[k] = temp - c;
-				k++;
-				c = 0;
-			}
+			temp[j] = str[i];
+			i++;
 		}
-		else if (c == 0)
-		{
-			c++;
-			start = i;
-		}
+		temp[j] = '\0';
+		matrix[k]  = temp;
+		k++;
 	}
 	matrix[k] = NULL;
 	return (matrix);
