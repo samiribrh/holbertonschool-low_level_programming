@@ -58,7 +58,12 @@ char **strtow(char *str)
 			;
 		temp = malloc(sizeof(char) * (wordlen + 1));
 		if (temp == NULL)
+		{
+			for (j = 0; j < k; j++)
+				free(matrix[j]);
+			free(matrix);
 			return (NULL);
+		}
 		for (j = 0; j < wordlen; j++)
 		{
 			temp[j] = str[i + j];
@@ -66,7 +71,7 @@ char **strtow(char *str)
 		temp[j] = '\0';
 		matrix[k]  = temp;
 		k++;
-		i += wordlen;
+		i += wordlen - 1;
 	}
 	matrix[k] = NULL;
 	return (matrix);
