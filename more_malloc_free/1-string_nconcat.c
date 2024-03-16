@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-*string_noncat - Concatenates two strings.
+*string_nconcat - Concatenates two strings.
 *@s1: First string.
 *@s2: Second string.
 *@n: Part of second string to be concatenated
@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	str = malloc(sizeof(char) * (l1 + n + 1));
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	while (*s1)
 	{
