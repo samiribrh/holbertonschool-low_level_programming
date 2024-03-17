@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "main.h"
+#include <string.h>
 
 /**
 *isNumeric - Checks the string if it is numeric.
@@ -32,7 +33,32 @@ int isNumeric(char *str)
 */
 void multiply(char *num1, char *num2)
 {
-	printf("%d\n", atoi(num1) * atoi(num2));
+	int len1 = strlen(num1);
+	int len2 = strlen(num2);
+	int resultLen, i, j, mul, sum;
+	int *result;
+
+	resultLen = len1 + len2;
+
+	result = calloc(resultLen, sizeof(int));
+	if (result == NULL)
+		return (NULL);
+
+	for (i = len1 - 1; i >= 0; i--)
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			mul = (num1[i] - '0') * (num2[j] - '0');
+			sum = mul + result[i + j + 1];
+			result[i + j] += sum / 10;
+			result[i + j + 1] = sum % 10;
+		}
+	i = 0;
+	while (i < resultLen - 1 && result[i] == 0)
+		i++;
+	for (; i < resultLen; i++)
+		printf("%d", result[i]);
+	printf("\n");
+	free(result);
 }
 
 /**
