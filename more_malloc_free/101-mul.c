@@ -42,6 +42,7 @@ void multiply(char *num1, char *num2)
 
 	result = calloc(resultLen, sizeof(int));
 	if (result == NULL)
+		free(result);
 		return;
 
 	for (i = len1 - 1; i >= 0; i--)
