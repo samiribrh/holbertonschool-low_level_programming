@@ -18,7 +18,7 @@ int isNumeric(char *str)
 	{
 		if (!isdigit(*(str + i)))
 			return (0);
-		i++:
+		i++;
 	}
 	return (1);
 }
