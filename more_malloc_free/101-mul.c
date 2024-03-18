@@ -43,6 +43,7 @@ void multiply(char *num1, char *num2)
 	result = calloc(resultLen, sizeof(int));
 	if (result == NULL)
 	{
+		printf("Memory allocation failed\n");
 		return;
 	}
 
@@ -60,6 +61,7 @@ void multiply(char *num1, char *num2)
 	for (; i < resultLen; i++)
 		printf("%d", result[i]);
 	printf("\n");
+	fflush(stdout);
 	free(result);
 }
 
