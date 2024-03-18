@@ -61,7 +61,7 @@ void multiply(char *num1, char *num2)
 	for (; i < resultLen; i++)
 		printf("%d", result[i]);
 	printf("\n");
-	fflush(stdout);
+
 	free(result);
 }
 
