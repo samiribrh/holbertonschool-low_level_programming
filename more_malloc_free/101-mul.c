@@ -38,7 +38,7 @@ void multiply(char *num1, char *num2)
 	int resultLen, i, j, mul, sum;
 	int *result;
 
-	resultLen = len1 + len2;
+	resultLen = len1 + len2 + 1;
 
 	result = calloc(resultLen, sizeof(int));
 	if (result == NULL)
