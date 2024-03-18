@@ -17,7 +17,7 @@ int isNumeric(char *str)
 
 	while (*(str + i))
 	{
-		if (!isdigit(*(str + i)))
+		if (*(str + i) < 48 || *(str + i) > 57)
 			return (0);
 		i++;
 	}
@@ -38,7 +38,7 @@ void multiply(char *num1, char *num2)
 	int resultLen, i, j, mul, sum;
 	int *result;
 
-	resultLen = len1 + len2 + 1;
+	resultLen = len1 + len2;
 
 	result = calloc(resultLen, sizeof(int));
 	if (result == NULL)
