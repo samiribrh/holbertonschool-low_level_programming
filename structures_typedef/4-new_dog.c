@@ -15,7 +15,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int lenName = 0, lenOwner = 0;
+	int lenName = 0, lenOwner = 0, i = 0;
 
 	while (*(name + lenName))
 		lenName++;
@@ -44,8 +44,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(dog->name, name);
+	for (i = 0; i < lenName; i++)
+		dog->name[i] = name[i];
 	dog->age = age;
-	strcpy(dog->owner, owner);
+	for (i = 0; i < lenOwner; i++)
+		dog->owner[i] = owner[i];
 	return (dog);
 }
