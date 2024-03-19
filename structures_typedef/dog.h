@@ -2,7 +2,7 @@
 #define MAIN_H_
 
 /**
-*dog - Defines a dog.
+*struct dog - Defines a dog.
 *@name: Name of the dog
 *@age: Age of the dog
 *@owner: Owner of the dog
