@@ -62,6 +62,8 @@ void multiply(char *num1, char *num2)
 		printf("%d", result[i]);
 	printf("\n");
 
+	free(num1);
+	free(num2);
 	free(result);
 }
 
