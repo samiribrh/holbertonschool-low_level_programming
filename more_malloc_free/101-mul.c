@@ -31,7 +31,7 @@ int isNumeric(char *str)
 *
 *Return: void.
 */
-void multiply(char *num1, char *num2)
+int multiply(char *num1, char *num2)
 {
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
@@ -44,7 +44,7 @@ void multiply(char *num1, char *num2)
 	if (result == NULL)
 	{
 		printf("Memory allocation failed\n");
-		return;
+		return (98);
 	}
 
 	for (i = len1 - 1; i >= 0; i--)
@@ -63,6 +63,7 @@ void multiply(char *num1, char *num2)
 	printf("\n");
 
 	free(result);
+	return (0);
 }
 
 /**
