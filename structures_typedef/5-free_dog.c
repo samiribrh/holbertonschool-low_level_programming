@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
-*init_dog - Frees struct dog.
+*free_dog - Frees struct dog.
 *@d: Structure
 *
 *Return: void.
