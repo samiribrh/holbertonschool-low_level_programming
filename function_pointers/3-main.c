@@ -23,6 +23,7 @@ int main(int argc, char **argv)
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+	*op = argv[2];
 	if ((*op != '*' && *op != '/' && *op != '+' && *op != '-' && *op != '%')
 			|| strlen(op) > 1)
 	{
