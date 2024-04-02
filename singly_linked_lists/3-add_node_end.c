@@ -14,8 +14,8 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *member;
 	unsigned int len = 0;
-	
-	if(!str)
+
+	if (!str)
 		return (NULL);
 	while (*(str + len))
 		len++;
