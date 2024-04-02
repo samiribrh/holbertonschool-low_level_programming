@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
-*premain: Writes the given string before main function starts.
+*premain - Writes the given string before main function starts.
 *
 *Return: void.
 */
