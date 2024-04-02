@@ -19,10 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	while (*(str + len))
 		len++;
-	member = *head;
-	while (member->next != NULL)
-		member = member->next;
-	
+
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
@@ -34,6 +31,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new;
 		return (new);
 	}
+	member = *head;
+	while (member->next != NULL)
+		member = member->next;
 	member->next = new;
 	return (new);
 }
