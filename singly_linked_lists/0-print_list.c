@@ -21,8 +21,7 @@ size_t print_list(const list_t *h)
 		count++;
 		if (h->next == NULL)
 			break;
-		else
-			h = h->next;
+		h = h->next;
 	}
 	return (count);
 }
