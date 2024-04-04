@@ -10,18 +10,15 @@
 */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint_t *member;
 	size_t count = 0;
 
 	if (h == NULL)
 		return (count);
-	member = *h;
-	while (1)
+	while (h)
 	{
-		printf("%d", member->n);
+		printf("%d\n", (*h).n);
+		h = (*h).next;
 		count++;
-		if (member->next == NULL)
-			return (count);
-		member = member->next;
 	}
+	return (count);
 }
