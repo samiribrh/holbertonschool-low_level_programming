@@ -3,10 +3,10 @@
 #include "lists.h"
 
 /**
- * print_dlistint - Prints the list.
- * @h: Head of the list
+ * sum_dlistint - Calculates the sum of the list.
+ * @head: Head of the list
  *
- * Return: Size of the list.
+ * Return: Sum of the list.
 */
 int sum_dlistint(dlistint_t *head)
 {
