@@ -16,18 +16,18 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while (*(b + len))
 	{
-		if (*(b + len) != 1 && *(b + len) != 0)
+		if (*(b + len) - '0' != 1 && *(b + len) - '0' != 0)
 			return (0);
-		if (*(b + len) == 1 && !started)
+		if (*(b + len) - '0' == 1 && !started)
 		{
 			started = 1;
 			start = len + 1;
 		}
 		len++;
 	}
-	while (start <= len)
+	while (start < len)
 	{
-		if (*(b + start) == 0)
+		if (*(b + start) -'0' == 0)
 			number *= 2;
 		else
 			number = number * 2 + 1;
