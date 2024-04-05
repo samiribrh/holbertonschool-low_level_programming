@@ -7,7 +7,7 @@ void print_num(int n)
 {
 	if (n == 0)
 		return;
-	print_num(n / 2)
+	print_num(n / 2);
 	printf("%d", n % 2);
 }
 
