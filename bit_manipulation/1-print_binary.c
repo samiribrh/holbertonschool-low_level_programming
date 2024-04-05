@@ -13,11 +13,11 @@ void print_binary(unsigned long int n)
 	if (n == 0)
 	{
 		printf("0");
-		return:
+		return;
 	}
 	while (n > 0)
 	{
-		binary[i] = n % 2;
+		buffer[i] = n % 2;
 		n = n / 2;
 		i++;
 	}
