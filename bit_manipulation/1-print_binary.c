@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	{
 		putchar(48);
 	}
-	print_bin(n);
+	print_num(n);
 }
 
 /**
