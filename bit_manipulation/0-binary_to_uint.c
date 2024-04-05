@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	while (start < len)
 	{
-		if (*(b + start) -'0' == 0)
+		if (*(b + start) - '0' == 0)
 			number *= 2;
 		else
 			number = number * 2 + 1;
