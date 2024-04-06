@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * set_bit - Sets the bit at specific index to 0;
+ * clear_bit - Sets the bit at specific index to 0;
  * @n: The number
  * @index: The index
  *
  * Return: 1,
  *	-1 if fails.
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (index >= sizeof(*n) * 8)
 		return (-1);
