@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	wed = write(fd, text_content, len);
-	if (w < 0)
+	if (wed < 0)
 		return (-1);
 	close(fd);
 	return (1);
