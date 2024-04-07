@@ -14,7 +14,7 @@
  int main(int argc, char **argv)
  {
 	int red, wed, rfile, wfile, cl;
-	char *buffer:
+	char *buffer;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
