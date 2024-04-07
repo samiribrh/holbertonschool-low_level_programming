@@ -30,11 +30,11 @@
 			argv[1]), free(buffer), exit(98);
 		wed = write(wfile, buffer, red);
 		if (wfile < 0 || wed < 0)
-			dprinft(STDERR_FILENO, "Error: Can't write to %s\n",
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 			argv[2]), free(buffer), exit(99);
 		red = read(rfile, buffer, 1024);
 		wfile = open(argv[2], O_WRONLY | O_APPEND);
-	} while (red > 0)
+	} while (red > 0);
 	free(buffer);
 	cl = close(rfile);
 	if (cl < 0)
